@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.com/relation/"
+   xmlns:ns2="http://example.com/property/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.com/resource/Venus">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Mercury">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Earth">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Mars"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Venus"/>
+    <ns1:Revolvs rdf:resource="http://example.com/resource/Sun"/>
+    <ns2:has_radius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6400 km</ns2:has_radius>
+    <ns2:Albedo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.434</ns2:Albedo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Moon">
+    <rdf:type rdf:resource="http://example.com/class/Satellite"/>
+    <ns1:Revolvs rdf:resource="http://example.com/resource/Earth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Neptune">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Proxima_Centauri">
+    <rdf:type rdf:resource="http://example.com/class/Star"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Sun"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Sun">
+    <ns2:has_radius rdf:datatype="http://www.w3.org/2001/XMLSchema#string">696000 km</ns2:has_radius>
+    <ns2:Absolute_magnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.83</ns2:Absolute_magnitude>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Proxima_Centauri"/>
+    <rdf:type rdf:resource="http://example.com/class/Star"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Jupiter">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Saturn"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Mars"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Io">
+    <rdf:type rdf:resource="http://example.com/class/Satellite"/>
+    <ns1:Revolvs rdf:resource="http://example.com/resource/Jupiter"/>
+    <ns1:Neighbour rdf:resource="http://example.com/resource/Callisto"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Uranus">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Saturn">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Pluto">
+    <rdf:type rdf:resource="http://example.com/class/Dwarf"/>
+    <ns1:Revolvs rdf:resource="http://example.com/resource/Sun"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Callisto">
+    <rdf:type rdf:resource="http://example.com/class/Satellite"/>
+    <ns1:Revolvs rdf:resource="http://example.com/resource/Jupiter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/resource/Mars">
+    <rdf:type rdf:resource="http://example.com/class/Planet"/>
+  </rdf:Description>
+</rdf:RDF>
